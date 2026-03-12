@@ -5,27 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>資源及下載 — 自由遊戲綜合教學法課程總結分享會</title>
     <link rel="stylesheet" href="../styles/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .download-btn { display:inline-flex; align-items:center; gap:10px; background:var(--brand-navy); color:white; padding:12px 22px; border-radius:8px; text-decoration:none; font-weight:600; font-size:0.95rem; transition:background 0.2s; align-self:flex-start; margin-top:auto; }
+        .download-btn:hover { background:#1a2570; }
+        .page-card p { margin:0; color:#5f6368; font-size:0.95em; line-height:1.6; }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="nav-wrapper">
-                <a href="../index.html" class="back-button">
-                    <i class="fas fa-arrow-left"></i> 返回主頁
-                </a>
-            </div>
-        </nav>
+        <nav><div class="nav-wrapper">
+            <a href="../index.html" class="back-button"><i class="fas fa-arrow-left"></i> 返回主頁</a>
+        </div></nav>
     </header>
     <main>
         <div class="page-header">
-            <h1><i class="fas fa-box-open"></i> 資源及下載</h1>
-            <p class="subtitle">資料及可下載檔案</p>
+            <i class="fas fa-box-open" style="font-size:2.5rem; color:#f99d33;"></i>
+            <h1>資源及下載</h1>
+            <p class="subtitle">活動材料及可下載檔案</p>
         </div>
-        <div class="content-wrapper">
-            <p>內容即將更新。</p>
-        </div>
+
+        <section class="page-grid">
+
+            <div class="page-card">
+                <h3><i class="fas fa-file-powerpoint"></i> 流程 PowerPoint</h3>
+                <p>完整的分享會流程簡報。可於分享會期間開啟或下載以供參考。</p>
+                <a href="https://qr.link/2lBfdx" target="_blank" rel="noopener noreferrer" class="download-btn">
+                    <i class="fas fa-external-link-alt"></i> 開啟 / 下載
+                </a>
+            </div>
+
+            <div class="page-card">
+                <h3><i class="fas fa-book-open"></i> 活動指引文件</h3>
+                <p>分享會活動的詳細指引及參考資料。歡迎下載保存以供日後參考。</p>
+                <a href="https://qr.link/inG2Km" target="_blank" rel="noopener noreferrer" class="download-btn">
+                    <i class="fas fa-download"></i> 下載指引
+                </a>
+            </div>
+
+        </section>
     </main>
     <footer><p>賽馬會童亮計劃自由遊戲綜合教學法課程總結分享會 — 2026年3月14日</p></footer>
 </body>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>問卷調查及Google Classroom — 自由遊戲綜合教學法課程總結分享會</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .survey-card { border-top:5px solid #e8eaed; }
+        .survey-card.pre-test   { border-top-color:#8dbe50; }
+        .survey-card.post-test  { border-top-color:#f04e69; }
+        .survey-card.final-year { border-top-color:#f99d33; }
+        .survey-card.cuhk       { border-top-color:#9b59b6; }
+        .survey-card.classroom  { border-top-color:#2b3990; }
+
+        .survey-card .card-icon { font-size:1.6rem; }
+        .survey-card.pre-test   .card-icon { color:#8dbe50; }
+        .survey-card.post-test  .card-icon { color:#f04e69; }
+        .survey-card.final-year .card-icon { color:#f99d33; }
+        .survey-card.cuhk       .card-icon { color:#9b59b6; }
+        .survey-card.classroom  .card-icon { color:#2b3990; }
+
+        .survey-card h2 { margin:0; font-size:1.05rem; color:#202124; font-weight:700; border:none; padding:0; }
+        .survey-card p  { margin:0; color:#5f6368; font-size:0.88rem; line-height:1.5; flex:1; }
+
+        .timing-badge { display:inline-flex; align-items:center; gap:5px; background:#f8f9fa; border:1px solid #e8eaed; border-radius:20px; padding:3px 10px; font-size:0.78em; font-weight:500; color:#5f6368; }
+
+        .survey-btn { display:flex; align-items:center; justify-content:center; gap:8px; padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:700; font-size:0.88rem; transition:opacity 0.2s; margin-top:auto; text-align:center; }
+        .survey-btn:hover { opacity:0.85; }
+        .survey-card.pre-test   .survey-btn { background:#8dbe50; color:white; }
+        .survey-card.post-test  .survey-btn { background:#f04e69; color:white; }
+        .survey-card.final-year .survey-btn { background:#f99d33; color:white; }
+        .survey-card.cuhk       .survey-btn { background:#9b59b6; color:white; }
+        .survey-card.classroom  .survey-btn { background:#2b3990; color:white; }
+
+        .no-link-box { background:#f8f9fa; border:1.5px dashed #dadce0; border-radius:8px; padding:10px 14px; display:flex; align-items:center; gap:8px; color:#5f6368; font-size:0.85rem; margin-top:auto; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav><div class="nav-wrapper">
+            <a href="../index.html" class="back-button"><i class="fas fa-arrow-left"></i> 返回主頁</a>
+        </div></nav>
+    </header>
+    <main>
+        <div class="page-header">
+            <i class="fas fa-poll" style="font-size:2.5rem; color:#f99d33;"></i>
+            <h1>問卷調查及Google Classroom</h1>
+            <p class="subtitle">完成問卷調查及加入Google Classroom</p>
+        </div>
+
+        <div class="page-grid">
+
+            <div class="page-card survey-card pre-test">
+                <i class="fas fa-clipboard-list card-icon"></i>
+                <h2>前測問卷</h2>
+                <span class="timing-badge"><i class="far fa-clock"></i> 分享會開始前</span>
+                <p>請於分享會活動開始前完成，大約需時5分鐘。</p>
+                <a href="https://eduhk.au1.qualtrics.com/jfe/form/SV_1UgFScb9EjCdZPw"
+                   target="_blank" rel="noopener noreferrer" class="survey-btn">
+                    <i class="fas fa-external-link-alt"></i> 開啟問卷
+                </a>
+            </div>
+
+            <div class="page-card survey-card post-test">
+                <i class="fas fa-clipboard-check card-icon"></i>
+                <h2>後測問卷</h2>
+                <span class="timing-badge"><i class="far fa-clock"></i> 所有環節結束後</span>
+                <p>請於分享會結束後完成，您的意見有助改善日後計劃。</p>
+                <a href="https://eduhk.au1.qualtrics.com/jfe/form/SV_6sNQjkbijFtMiX4"
+                   target="_blank" rel="noopener noreferrer" class="survey-btn">
+                    <i class="fas fa-external-link-alt"></i> 開啟問卷
+                </a>
+            </div>
+
+            <div class="page-card survey-card final-year">
+                <i class="fas fa-school card-icon"></i>
+                <h2>學年總結學校問卷</h2>
+                <span class="timing-badge"><i class="far fa-clock"></i> 分享會期間</span>
+                <p>請填寫學校整體情況及學年反思。</p>
+                <a href="https://form.jotform.com/252570560982058"
+                   target="_blank" rel="noopener noreferrer" class="survey-btn">
+                    <i class="fas fa-external-link-alt"></i> 開啟問卷
+                </a>
+            </div>
+
+            <div class="page-card survey-card cuhk">
+                <i class="fas fa-university card-icon"></i>
+                <h2>中大問卷</h2>
+                <span class="timing-badge"><i class="far fa-clock"></i> 分享會期間</span>
+                <p>香港中文大學問卷，請參閱現場派發的印刷本完成填寫。</p>
+                <div class="no-link-box">
+                    <i class="fas fa-print"></i> 請參閱現場印刷本
+                </div>
+            </div>
+
+            <div class="page-card survey-card classroom">
+                <i class="fas fa-chalkboard card-icon"></i>
+                <h2>Google Classroom</h2>
+                <span class="timing-badge"><i class="fas fa-info-circle"></i> 隨時加入</span>
+                <p>加入以取覽共享材料及分享會後繼續學習。</p>
+                <a href="https://qr.codes/KcWzCB"
+                   target="_blank" rel="noopener noreferrer" class="survey-btn">
+                    <i class="fas fa-external-link-alt"></i> 加入Classroom
+                </a>
+            </div>
+
+        </div>
+    </main>
+    <footer><p>賽馬會童亮計劃自由遊戲綜合教學法課程總結分享會 — 2026年3月14日</p></footer>
+</body>
+</html>

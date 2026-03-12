@@ -5,28 +5,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>活動詳情 — 自由遊戲綜合教學法課程總結分享會</title>
     <link rel="stylesheet" href="../styles/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .tabs-container { display:flex; gap:12px; margin-bottom:24px; overflow-x:auto; padding-bottom:8px; }
+        .tab-btn { background:#ffffff; border:1px solid #e8eaed; padding:12px 24px; border-radius:30px; font-size:1em; font-weight:500; color:#5f6368; cursor:pointer; transition:all 0.2s ease; white-space:nowrap; display:flex; align-items:center; gap:8px; }
+        .tab-btn:hover { background:#f8f9fa; border-color:#dadce0; }
+        .tab-btn.active { background:#fff8e1; color:#f99d33; border-color:#ffe0b2; }
+        .tab-content { display:none; }
+        .tab-content.active { display:block; animation:fadeIn 0.3s ease; }
+        @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+        .activity-card { background:white; border-radius:16px; padding:28px; box-shadow:0 4px 12px rgba(0,0,0,0.07); margin-bottom:20px; }
+        .activity-title-bar { border-radius:12px; padding:20px 24px; margin-bottom:20px; display:flex; align-items:flex-start; gap:16px; }
+        .activity-title-bar i { font-size:1.8rem; margin-top:2px; }
+        .activity-title-bar h2 { color:white; margin:0 0 6px; font-size:1.3rem; }
+        .activity-title-bar p { color:rgba(255,255,255,0.85); margin:0; font-size:0.95rem; line-height:1.5; }
+
+        .section-label { font-size:0.8rem; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; color:#5f6368; margin:0 0 10px; }
+        .grouping-box { background:#f8f9fa; border-radius:10px; padding:14px 18px; color:#3c4043; line-height:1.6; margin-bottom:20px; }
+        .grouping-box i { color:#f99d33; margin-right:6px; }
+
+        .materials-list { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px; }
+        .material-chip { background:#fff8e1; border:1.5px solid #ffe0b2; color:#c77800; border-radius:30px; padding:8px 16px; font-size:0.9rem; font-weight:600; display:inline-flex; align-items:center; gap:8px; }
+
+        .steps-list { list-style:none; padding:0; margin:0; }
+        .steps-list li { display:flex; gap:16px; padding:14px 0; border-bottom:1px solid #f1f3f4; align-items:flex-start; }
+        .steps-list li:last-child { border-bottom:none; }
+        .step-num { background:#2b3990; color:white; border-radius:50%; width:28px; height:28px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.85rem; flex-shrink:0; margin-top:1px; }
+        .step-body { flex:1; }
+        .step-body strong { display:block; color:#202124; margin-bottom:4px; }
+        .step-body span { color:#5f6368; font-size:0.92rem; line-height:1.5; }
+        .step-time { background:#f1f3f4; color:#5f6368; border-radius:20px; padding:2px 10px; font-size:0.8rem; font-weight:500; display:inline-flex; align-items:center; gap:5px; margin-left:8px; vertical-align:middle; }
+
+        .padlet-btn { display:inline-flex; align-items:center; gap:10px; background:#2b3990; color:white; padding:12px 22px; border-radius:8px; text-decoration:none; font-weight:600; margin-bottom:20px; }
+        .padlet-btn:hover { background:#1a2570; }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="nav-wrapper">
-                <a href="../index.html" class="back-button">
-                    <i class="fas fa-arrow-left"></i> 返回主頁
-                </a>
-            </div>
-        </nav>
+        <nav><div class="nav-wrapper">
+            <a href="../index.html" class="back-button"><i class="fas fa-arrow-left"></i> 返回主頁</a>
+        </div></nav>
     </header>
-    <main>
+    <main class="content-wrapper">
         <div class="page-header">
-            <h1><i class="fas fa-list-alt"></i> 活動詳情</h1>
+            <i class="fas fa-layer-group" style="font-size:2.5rem; color:#f99d33;"></i>
+            <h1>活動詳情</h1>
             <p class="subtitle">活動一及活動二的指引</p>
         </div>
-        <div class="content-wrapper">
-            <p>內容即將更新。</p>
+
+        <div class="tabs-container">
+            <button class="tab-btn active" onclick="switchTab('activity1', this)"><i class="fas fa-puzzle-piece"></i> 活動一</button>
+            <button class="tab-btn" onclick="switchTab('activity2', this)"><i class="fas fa-map-marked-alt"></i> 活動二</button>
         </div>
+
+        <!-- 活動一 -->
+        <div id="activity1" class="tab-content active">
+            <div class="activity-title-bar" style="background:linear-gradient(135deg, #2b3990, #1a2570);">
+                <i class="fas fa-images" style="color:white;"></i>
+                <div>
+                    <h2>海報分享環節</h2>
+                    <p>閱讀及討論各學校海報，並進行互動問答</p>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <p class="section-label">活動步驟</p>
+                <ol class="steps-list">
+                    <li>
+                        <div class="step-num">1</div>
+                        <div class="step-body">
+                            <strong>閱讀海報 <span class="step-time"><i class="far fa-clock"></i> 10分鐘</span></strong>
+                            <span>參閱各學校展示的海報 — 亦可於 <a href="https://drive.google.com/drive/folders/1TQ3ZTKOnQF1mgY9rNDHFNH5A5hk15SBx?usp=sharing" target="_blank" rel="noopener noreferrer" style="color:#2b3990; font-weight:600;">Google Drive</a> 查閱，或參閱 Google Classroom 內的共享資料</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">2</div>
+                        <div class="step-body">
+                            <strong>小組討論 <span class="step-time"><i class="far fa-clock"></i> 10分鐘</span></strong>
+                            <span>就海報內容進行小組討論</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">3</div>
+                        <div class="step-body">
+                            <strong>互動問答 <span class="step-time"><i class="far fa-clock"></i> 20分鐘</span></strong>
+                            <span>與全體人員進行互動問答交流</span>
+                        </div>
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+
+        <!-- 活動二 -->
+        <div id="activity2" class="tab-content">
+            <div class="activity-title-bar" style="background:linear-gradient(135deg, #0d9488, #0f766e);">
+                <i class="fas fa-map-marked-alt" style="color:white;"></i>
+                <div>
+                    <h2>「童亮自由玩！」社區地圖</h2>
+                    <p>協作識別本地社區資源，並在Padlet地圖上共同標記</p>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <a href="https://padlet.com/herman925/padlet-wn71epc6q7opgcf6" target="_blank" rel="noopener noreferrer" class="padlet-btn">
+                    <i class="fas fa-external-link-alt"></i> 開啟Padlet版面
+                </a>
+
+                <p class="section-label">分組安排</p>
+                <div class="grouping-box"><i class="fas fa-map-marker-alt"></i> 按地區分組 — 屯門、元朗、九龍城、沙田、深水埗</div>
+
+                <p class="section-label">活動步驟</p>
+                <ol class="steps-list">
+                    <li>
+                        <div class="step-num">1</div>
+                        <div class="step-body">
+                            <strong>簡介 <span class="step-time"><i class="far fa-clock"></i> 2分鐘</span></strong>
+                            <span>掃描QR碼進入Padlet，確認已在正確的地區小組</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">2</div>
+                        <div class="step-body">
+                            <strong>社區集思 <span class="step-time"><i class="far fa-clock"></i> 10分鐘</span></strong>
+                            <span>集思本地遊戲空間（公園、圖書館、海濱等），在Padlet地圖上新增項目，填寫地區及地方類別，並按圖例設置顏色</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">3</div>
+                        <div class="step-body">
+                            <strong>分析及標注 <span class="step-time"><i class="far fa-clock"></i> 10分鐘</span></strong>
+                            <span>參考「Padlet張貼指引及圖例」評估各地點，並在Padlet加入評語</span>
+                            <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:10px;">
+                                <a href="../downloads/cps_prompt_sheet.docx" download class="material-chip" style="text-decoration:none;"><i class="fas fa-download"></i> CPS Prompt Sheet</a>
+                                <a href="../downloads/legend_sheet.docx" download class="material-chip" style="text-decoration:none;"><i class="fas fa-download"></i> Padlet Legend Sheet</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">4</div>
+                        <div class="step-body">
+                            <strong>整合準備 <span class="step-time"><i class="far fa-clock"></i> 3分鐘</span></strong>
+                            <span>找出1至2個重要發現，指定成員準備分享</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="step-num">5</div>
+                        <div class="step-body">
+                            <strong>全體分享 <span class="step-time"><i class="far fa-clock"></i> 15分鐘</span></strong>
+                            <span>各組代表向全體人員分享重點心得</span>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
     </main>
     <footer><p>賽馬會童亮計劃自由遊戲綜合教學法課程總結分享會 — 2026年3月14日</p></footer>
+    <script>
+        function switchTab(tabId, btn) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+        }
+    </script>
 </body>
 </html>
