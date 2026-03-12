@@ -7,9 +7,9 @@
 
 ### Navigation
 
-- [ ] **NAV-01**: Participant sees a clean homepage with clear cards/sections for all content areas
-- [ ] **NAV-02**: Site works well on mobile (participants will use phones during conference)
-- [ ] **NAV-03**: Navigation back to homepage is always accessible
+- [x] **NAV-01**: Participant sees a clean homepage with clear cards/sections for all content areas
+- [x] **NAV-02**: Site works well on mobile (participants will use phones during conference)
+- [x] **NAV-03**: Navigation back to homepage is always accessible
 
 ### Programme
 
@@ -51,9 +51,9 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| NAV-01 | Phase 1 | Pending |
-| NAV-02 | Phase 1 | Pending |
-| NAV-03 | Phase 1 | Pending |
+| NAV-01 | Phase 1 | Complete (01-01) |
+| NAV-02 | Phase 1 | Complete (01-01) |
+| NAV-03 | Phase 1 | Complete (01-01) |
 | PROG-01 | Phase 2 | Pending |
 | PROG-02 | Phase 2 | Pending |
 | ACT-01 | Phase 2 | Pending |

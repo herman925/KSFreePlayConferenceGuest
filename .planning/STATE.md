@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-03-12)
 ## Current Position
 
 Phase: 1 of 2 (Site Foundation)
-Plan: 0 of 1 in current phase
-Status: Ready to plan
-Last activity: 2026-03-12 — Roadmap created
+Plan: 1 of 1 in current phase
+Status: Phase 1 complete
+Last activity: 2026-03-12 — Completed 01-01 Site Foundation
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [█████░░░░░] 50%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0
-- Average duration: -
-- Total execution time: -
+- Total plans completed: 1
+- Average duration: 15min
+- Total execution time: 15min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 01-site-foundation | 1 | 15min | 15min |
 
 **Recent Trend:**
-- Last 5 plans: -
-- Trend: -
+- Last 5 plans: 15min
+- Trend: establishing baseline
 
 *Updated after each plan completion*
 
@@ -45,6 +45,9 @@ Recent decisions affecting current work:
 - Port from organizer site (KSFreePlayConference) rather than rebuild from scratch
 - Dedicated survey section on homepage — surveys are a primary action
 - Remove role selector — all users are participants
+- Used window.location.href routing via data-section to allow Phase 2 conditional navigation
+- surveys.html deferred to Phase 2 (SURV-01 to SURV-04)
+- Kept .btn, .info-card, .details-grid, .timeline-* in CSS for Phase 2 content pages
 
 ### Pending Todos
 
@@ -57,5 +60,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-12
-Stopped at: Roadmap created — ready to plan Phase 1
+Stopped at: Completed 01-01-PLAN.md — site foundation shell complete
 Resume file: None

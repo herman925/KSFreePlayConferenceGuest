@@ -12,7 +12,7 @@ Two phases take this from empty repo to a fully functional conference companion 
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Site Foundation** - Homepage shell, navigation, and mobile layout
+- [x] **Phase 1: Site Foundation** - Homepage shell, navigation, and mobile layout
 - [ ] **Phase 2: Content and Actions** - Programme, activities, resources, surveys, and classroom links
 
 ## Phase Details
@@ -28,7 +28,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 1 plan
 
 Plans:
-- [ ] 01-01-PLAN.md — Port CSS from organizer site, build homepage with five navigation cards, and create four stub sub-pages with back-navigation
+- [x] 01-01-PLAN.md — Port CSS from organizer site, build homepage with five navigation cards, and create four stub sub-pages with back-navigation
 
 ### Phase 2: Content and Actions
 **Goal**: Every piece of content and every actionable link a participant needs is live and reachable
@@ -54,5 +54,5 @@ Phases execute in numeric order: 1 → 2
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Site Foundation | 0/1 | Not started | - |
+| 1. Site Foundation | 1/1 | Complete | 2026-03-12 |
 | 2. Content and Actions | 0/3 | Not started | - |
