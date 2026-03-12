@@ -25,10 +25,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   1. Participant opens the site on a phone and sees a clean homepage with clearly labelled sections for all content areas
   2. Participant can tap a navigation link and return to the homepage from any page
   3. Text, buttons, and cards are legible and tappable on a small screen without horizontal scrolling
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 01-01: Port HTML/CSS base from organizer site and scaffold homepage with placeholder sections
+- [ ] 01-01-PLAN.md — Port CSS from organizer site, build homepage with five navigation cards, and create four stub sub-pages with back-navigation
 
 ### Phase 2: Content and Actions
 **Goal**: Every piece of content and every actionable link a participant needs is live and reachable
