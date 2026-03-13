@@ -471,17 +471,3 @@ footer {
         padding: 1rem;
     }
 }
-
-/* Guest site additions */
-.surveys-card {
-    background: linear-gradient(135deg, #2b3990 0%, #1a2570 100%);
-}
-.surveys-card i,
-.surveys-card h2,
-.surveys-card p {
-    color: white;
-}
-.surveys-card:hover {
-    background: linear-gradient(135deg, #1a2570 0%, #0f1a5e 100%);
-    background-color: transparent;
-}
