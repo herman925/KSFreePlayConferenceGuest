@@ -8,14 +8,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        .details-grid { display:grid; gap:14px; }
-        .detail-item { display:grid; gap:6px; }
-        .detail-item strong { color:#34495e; font-weight:500; display:flex; align-items:center; gap:8px; }
+        .page-header { padding:1.6rem 1rem 0.75rem; }
+        .page-grid { max-width:980px; gap:0.875rem; padding:0.75rem 1rem 1rem; }
+        .page-card { border-radius:10px; }
+        .details-grid { display:grid; gap:10px; }
+        .detail-item { display:grid; gap:4px; }
+        .detail-item strong { color:#34495e; font-weight:500; display:flex; align-items:center; gap:8px; font-size:0.95rem; }
         .detail-item strong i { color:#9b59b6; width:16px; text-align:center; }
-        .detail-item span { color:#576574; line-height:1.5; padding-left:24px; }
-        .quick-links { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:12px; }
-        .link-button { display:flex; align-items:center; justify-content:center; gap:10px; background:var(--brand-orange); color:white; padding:12px 20px; border-radius:8px; text-decoration:none; font-weight:600; transition:all 0.2s ease; }
-        .link-button:hover { background:#e88d22; transform:translateY(-2px); }
+        .detail-item span { color:#576574; line-height:1.45; padding-left:24px; font-size:0.94rem; }
+        .collapsible-card { padding:0; gap:0; overflow:hidden; }
+        .collapsible-trigger { width:100%; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:1rem 1.1rem; border:none; background:none; text-align:left; cursor:pointer; font:inherit; color:inherit; }
+        .collapsible-trigger h2 { margin:0; padding-bottom:0; border-bottom:none; flex:1; font-size:1.08rem; }
+        .collapsible-trigger:focus-visible { outline:2px solid var(--brand-orange); outline-offset:-2px; }
+        .collapsible-icon { color:var(--brand-orange); transition:transform 0.2s ease; }
+        .collapsible-content { display:none; padding:0 1.1rem 1.1rem; }
+        .collapsible-card.is-open .collapsible-content { display:grid; }
+        .collapsible-card.is-open .collapsible-icon { transform:rotate(180deg); }
+        @media (max-width:768px) {
+            .page-header { padding:1.2rem 0.9rem 0.5rem; }
+            .page-grid { gap:0.75rem; padding:0.625rem 0.75rem 0.875rem; }
+            .collapsible-trigger { padding:0.9rem 1rem; }
+            .collapsible-content { padding:0 1rem 1rem; }
+            .detail-item strong { font-size:0.92rem; }
+            .detail-item span { font-size:0.91rem; }
+        }
     </style>
 </head>
 <body>
@@ -36,9 +52,12 @@
         <section class="page-grid">
 
           <!-- 卡片一：活動詳情 -->
-          <div class="page-card">
-            <h2><i class="fas fa-info-circle"></i> 活動詳情</h2>
-            <div class="details-grid">
+          <div class="page-card collapsible-card">
+            <button class="collapsible-trigger" type="button" aria-expanded="false">
+              <h2><i class="fas fa-info-circle"></i> 活動詳情</h2>
+              <i class="fas fa-chevron-down collapsible-icon" aria-hidden="true"></i>
+            </button>
+            <div class="details-grid collapsible-content">
               <div class="detail-item"><strong><i class="far fa-calendar"></i> 日期</strong><span>2026年3月14日（星期六）</span></div>
               <div class="detail-item"><strong><i class="far fa-clock"></i> 時間</strong><span>上午9時至下午1時</span></div>
               <div class="detail-item"><strong><i class="fas fa-clipboard-check"></i> 登記</strong><span>上午8時30分開始</span></div>
@@ -49,9 +68,12 @@
           </div>
 
           <!-- 卡片二：重點目標 -->
-          <div class="page-card">
-            <h2><i class="fas fa-bullseye"></i> 重點目標</h2>
-            <div class="details-grid">
+          <div class="page-card collapsible-card">
+            <button class="collapsible-trigger" type="button" aria-expanded="false">
+              <h2><i class="fas fa-bullseye"></i> 重點目標</h2>
+              <i class="fas fa-chevron-down collapsible-icon" aria-hidden="true"></i>
+            </button>
+            <div class="details-grid collapsible-content">
               <div class="detail-item"><strong><i class="fas fa-layer-group"></i> 整合學習成果</strong><span>整合及總結自由遊戲綜合教學法的學習成果</span></div>
               <div class="detail-item"><strong><i class="fas fa-network-wired"></i> 建立專業學習社群</strong><span>建立跨校及跨區的專業學習社群</span></div>
               <div class="detail-item"><strong><i class="fas fa-share-alt"></i> 分享實踐經驗</strong><span>分享各學校的真實案例及推行策略</span></div>
@@ -59,17 +81,51 @@
             </div>
           </div>
 
-          <!-- 卡片三：快速連結 -->
-          <div class="page-card">
-            <h2><i class="fas fa-link"></i> 快速連結</h2>
-            <div class="quick-links">
-              <a href="schedule.html" class="link-button"><i class="fas fa-calendar-alt"></i> 時間表</a>
-              <a href="activity_details.html" class="link-button"><i class="fas fa-list-alt"></i> 活動詳情</a>
+          <!-- 卡片四：交通資訊 -->
+          <div class="page-card collapsible-card">
+            <button class="collapsible-trigger" type="button" aria-expanded="false">
+              <h2><i class="fas fa-bus"></i> 交通資訊</h2>
+              <i class="fas fa-chevron-down collapsible-icon" aria-hidden="true"></i>
+            </button>
+            <div class="details-grid collapsible-content">
+              <div class="detail-item">
+                <strong><i class="fas fa-map-marker-alt"></i> 屯門</strong>
+                <span>早上7:50，上車地點：屯門 V City 商場地下過境巴士站</span>
+              </div>
+              <div class="detail-item">
+                <strong><i class="fas fa-map-marker-alt"></i> 元朗</strong>
+                <span>早上8:10，上車地點：元朗站 H 出口朗明街（形點 I 外）</span>
+              </div>
+              <div class="detail-item">
+                <strong><i class="fas fa-exclamation-circle"></i> 備註</strong>
+                <span>由於為同一班車，元朗的出車時間可能會因屯門的情況有所延遲，敬請見諒。</span>
+              </div>
+              <div class="detail-item">
+                <strong><i class="fas fa-car-side"></i> 車牌號碼</strong>
+                <span>KC7211</span>
+              </div>
+              <div class="detail-item">
+                <strong><i class="fas fa-shuttle-van"></i> 車輛資訊</strong>
+                <span>29 座小巴</span>
+              </div>
+              <div class="detail-item">
+                <strong><i class="fas fa-arrow-left"></i> 回程資料</strong>
+                <span>BB2618，譚先生 53037365</span>
+              </div>
             </div>
           </div>
 
         </section>
     </main>
+  <script>
+    document.querySelectorAll('.collapsible-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const card = trigger.closest('.collapsible-card');
+        const isOpen = card.classList.toggle('is-open');
+        trigger.setAttribute('aria-expanded', String(isOpen));
+      });
+    });
+  </script>
     <footer><p>賽馬會童亮計劃自由遊戲綜合教學法課程總結分享會 — 2026年3月14日</p></footer>
 </body>
 </html>
